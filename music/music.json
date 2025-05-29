@@ -1,0 +1,40 @@
+[
+{
+	"id":1,
+	"name":"我们的歌-王力宏.mp3",
+	"music_path":"http://localhost/music/我们的歌-王力宏.mp3",
+    "irc_path":"http://localhost/music/我们的歌-王力宏.lrc"
+},
+{
+	"id":2,
+	"name":"我记得-赵雷.mp3",
+	"music_path":"http://localhost/music/我记得-赵雷.mp3",
+     "irc_path":"http://localhost/music/我记得-赵雷.lrc"
+},
+{
+	"id":3,
+	"name":"退后-周杰伦.mp3",
+	"music_path":"http://localhost/music/退后-周杰伦.mp3",
+     "irc_path":"http://localhost/music/退后-周杰伦.lrc"
+},
+{
+	"id":4,
+	"name":"晴天-周杰伦.mp3",
+	"music_path":"http://localhost/music/晴天-周杰伦.mp3",
+     "irc_path":"http://localhost/music/晴天-周杰伦.lrc"
+},
+{
+	"id":5,
+	"name":"红尘客栈-周杰伦.mp3",
+	"music_path":"http://localhost/music/红尘客栈-周杰伦.mp3",
+     "irc_path":"http://localhost/music/红尘客栈-周杰伦.lrc"
+},
+{
+	"id":6,
+	"name":"富士山下-陈奕迅.mp3",
+	"music_path":"http://localhost/music/富士山下-陈奕迅.mp3",
+     "irc_path":"http://localhost/music/富士山下-陈奕迅.lrc"
+}
+
+
+]
