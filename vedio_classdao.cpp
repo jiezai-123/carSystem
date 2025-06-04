@@ -2,16 +2,17 @@
 
 Vedio_classDao::Vedio_classDao()
 {
+    //加载数据库驱动
+        this->db=QSqlDatabase::addDatabase("QSQLITE");
 
+        //设置数据库文件路径
+        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 }
 
 void Vedio_classDao::add(Video_class &locvideo)
 
 {
 
-       QSqlDatabase db= QSqlDatabase::addDatabase("QSQLITE");
-
-       db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
         //打开数据库
         if (!db.open()) {
             qDebug()<<"打开数据库失败！"<<db.lastError().text();
@@ -31,11 +32,6 @@ void Vedio_classDao::add(Video_class &locvideo)
 }
 void Vedio_classDao::update(Video_class &locvideo)
 {
-    //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
         //打开数据库
         if (!db.open()) {
@@ -58,11 +54,6 @@ void Vedio_classDao::update(Video_class &locvideo)
 
 void Vedio_classDao::deById(int id)
 {
-    //加载数据库驱动
-       QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-       //设置数据库文件路径
-       db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
        //打开数据库
        if (!db.open()) {
@@ -85,11 +76,6 @@ void Vedio_classDao::deById(int id)
 Video_class *Vedio_classDao::findById(int id)
 {
     Video_class *locvideo=nullptr;
-        //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
         //打开数据库
         if (!db.open()) {
@@ -127,11 +113,6 @@ Video_class *Vedio_classDao::findById(int id)
 QVector<Video_class> Vedio_classDao::findAll()
 {
     QVector<Video_class> localvideos;
-    //加载数据库
-          QSqlDatabase db  = QSqlDatabase::addDatabase("QSQLITE");
-
-            //设置数据库文件路径
-            db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
             //打开数据库
             if (!db.open()) {

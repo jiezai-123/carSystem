@@ -6,7 +6,7 @@
 #include<QSqlError>
 #include <QDebug>
 #include "music_class.h"
-
+#include <QSqlDatabase>
 class Music_classDao
 {
 public:
@@ -20,6 +20,8 @@ public:
            //数据库的查询
            Music_Class *findById(int id);
            QVector<Music_Class> findAll();
+private:
+    QSqlDatabase db;
 };
 
 #endif // MUSIC_CLASSDAO_H

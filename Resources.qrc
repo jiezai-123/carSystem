@@ -44,10 +44,10 @@
         <file>imgs/voiceclose.png</file>
         <file>imgs/voiceopen.png</file>
         <file>qcss/tab.qcss</file>
-        <file>imgs/screen.png</file>
         <file>imgs/map_background.jpg</file>
         <file>imgs/zoom_m.png</file>
         <file>imgs/zoom_p.png</file>
         <file>qcss/lrcitem.qcss</file>
+        <file>imgs/screen.png</file>
     </qresource>
 </RCC>

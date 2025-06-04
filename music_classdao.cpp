@@ -3,16 +3,16 @@
 
 Music_classDao::Music_classDao()
 {
+    //加载数据库驱动
+        this->db=QSqlDatabase::addDatabase("QSQLITE");
+
+        //设置数据库文件路径
+        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
 }
 
 void Music_classDao::add(Music_Class &locmusic)
 {
-    //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE","qt_sql_default_connection");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
         //打开数据库
         if (!db.open()) {
@@ -36,12 +36,6 @@ void Music_classDao::add(Music_Class &locmusic)
 
 void Music_classDao::update(Music_Class &locmusic)
 {
-    //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
-
         //打开数据库
         if (!db.open()) {
             qDebug()<<"打开数据库失败！"<<db.lastError().text();
@@ -63,12 +57,6 @@ void Music_classDao::update(Music_Class &locmusic)
 
 void Music_classDao::deById(int id)
 {
-    //加载数据库驱动
-       QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-       //设置数据库文件路径
-       db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
-
        //打开数据库
        if (!db.open()) {
            qDebug()<<"打开数据库失败！"<<db.lastError().text();
@@ -90,11 +78,6 @@ void Music_classDao::deById(int id)
 Music_Class *Music_classDao::findById(int id)
 {
     Music_Class *locmusic=nullptr;
-        //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
         //打开数据库
         if (!db.open()) {
@@ -133,11 +116,6 @@ Music_Class *Music_classDao::findById(int id)
 QVector<Music_Class> Music_classDao::findAll()
 {
     QVector<Music_Class> localmusics;
-        //加载数据库驱动
-        QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-
-        //设置数据库文件路径
-        db.setDatabaseName("D:/QTproject/carSystem/DB/carSystem.db");
 
         //打开数据库
         if (!db.open()) {

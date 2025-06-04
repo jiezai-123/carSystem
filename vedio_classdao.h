@@ -6,6 +6,7 @@
 #include<QSqlQuery>
 #include<QSqlError>
 #include <QDebug>
+#include <QSqlDatabase>
 class Vedio_classDao
 {
 public:
@@ -19,6 +20,8 @@ public:
            //数据库的查询
            Video_class *findById(int id);
            QVector<Video_class> findAll();
+private:
+    QSqlDatabase db;
 };
 
 #endif // VEDIO_CLASSDAO_H
